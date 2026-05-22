@@ -6,8 +6,8 @@
 echo "⏳ 正在注入 Rust/Cargo 生产力环境加速变量..."
 
 # 1. 开启最现代化的稀疏索引协议（结合中科大官方规范，彻底告别旧版 Git 索引卡顿）
-set -Ux CARGO_REGISTRIES_CRATES_IO_PROTOCOL sparse
-set -Ux CARGO_REGISTRY_GLOBAL_CREDENTIAL_PROVIDERS "cargo:token"  # 确保现代安全协议兼容
+set -Ux CARGO_REGISTRY_CRATES_IO_PROTOCOL sparse
+set -Ux CARGO_REGISTRIES_CRATES_IO_INDEX "https://mirrors.ustc.edu.cn/sparse/"
 
 # 2. 将 Crate 依赖源指向中科大稀疏镜像站
 set -Ux CARGO_REGISTRY_SRC_INDEX_CRATES_IO_INDEX "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
