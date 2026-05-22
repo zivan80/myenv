@@ -10,7 +10,8 @@ set -Ux UV_INDEX_URL https://mirrors.cloud.tencent.com/pypi/simple/
 set -Ux UV_ONLY_BINARY :all:
 
 # 3. 切换 Python 独立解释器下载源为国内官方高速通道（解决 uvx --python 下载环境慢的问题）
-set -Ux UV_PYTHON_INSTALL_MIRROR https://pub-cn-bj.pypa.io/python-build-standalone
+set -Ux UV_PYTHON_INSTALL_MIRROR https://gh-proxy.com/github.com/indygreg/python-build-standalone/releases/download
+
 
 # 4. 打印成功日志
 echo "✨ [Success] UV 全局加速环境变量已成功烙印，重启终端依然有效。"
